@@ -48,7 +48,7 @@
   }
 
   .page {
-    background-color: rgb(32, 0, 0);
+    background-color: #200000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,14 +61,14 @@
 
   form {
     font-family: "Exo", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: rgb(0, 0, 0);
-    color: aliceblue;
+    background-color: #000000;
+    color: #f0f8ff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 5rem;
-    box-shadow: rgba(0, 0, 0, 0.397) 1px 1px 10px 5px;
+    box-shadow: #00000065 1px 1px 10px 5px;
   }
 
   label {
@@ -91,9 +91,15 @@
     margin-bottom: 15px;
   }
   
-  p {
+  .form-head {
     margin-bottom: 35px;
   }
+
+  .instructions {
+    font-size: .75rem;
+    color:#f0ab2c;
+  }
+
 
   input[type="text"],
   input[type="email"],
@@ -101,7 +107,7 @@
   input[type="tel"],
   textarea,
   select {
-    background-color: rgb(36, 36, 36);
+    background-color: #242424;
     appearance: none;
     width: 350px;
     border-style: solid;
@@ -113,8 +119,8 @@
   input[type="password"]:user-invalid,
   input[type="tel"]:user-invalid,
   textarea:user-invalid {
-    border-color:rgb(223, 0, 0);
-    background-color: rgba(223, 0, 0, 0.226);
+    border-color:#df0000;
+    background-color: #df00003a;
   }
 
   input[type="text"]:focus:invalid,
@@ -122,8 +128,8 @@
   input[type="password"]:focus:invalid,
   input[type="tel"]:focus:invalid,
   textarea:focus:invalid {
-    outline-color:rgb(223, 0, 0);
-    background-color: rgb(36, 36, 36)
+    outline-color:#df0000;
+    background-color: #242424
   }
 
   input[type="text"]:user-valid,
@@ -131,7 +137,7 @@
   input[type="password"]:user-valid,
   input[type="tel"]:user-valid,
   textarea:user-valid {
-    border-color:rgb(0, 131, 22);
+    border-color:#008316;
   }
 
   input[type="text"]:focus:valid,
@@ -139,26 +145,28 @@
   input[type="password"]:focus:valid,
   input[type="tel"]:focus:valid,
   textarea:focus:valid {
-    outline-color:rgb(0, 131, 22);
+    outline-color:#008316;
   }
 
   
   button {
     outline: transparent;
-    border-color: rgb(32, 24, 0);
+    border-color: #634000;
     border-style: solid;
     border-radius: 30px;
     padding: 15px;
-    background-color: rgb(199, 153, 4);
+    background: linear-gradient(to left, #774d00, #bb7900, #f8cd7d, #bb7900, #774d00);
     text-transform: capitalize;
+    font-weight: bold;
   }
 
   button:hover {
     outline: transparent;
-    border-color: rgb(86, 196, 211);
+    border-color: #966e00;
+    box-shadow: #fdbf4c 0px 0px 15px 5px;
     border-radius: 30px;
     padding: 15px;
-    background-color: rgb(74, 151, 161);
+    background: linear-gradient(to left, #774d00, #bb7900, #f0ab2c, #bb7900, #774d00);
     cursor: pointer;
     
   }
@@ -171,13 +179,13 @@
   input:user-valid + span::before,
   textarea:user-valid + span::before {
     content: "✔";
-    color: rgb(0, 131, 22);
+    color: #008316;
     position: absolute;
   }
   input:user-invalid + span::before,
   textarea:user-invalid + span::before {
     content: "❌";
-    color: rgb(223, 0, 0);
+    color: #df0000;
     position: absolute;
   }
 
@@ -227,23 +235,24 @@
     
     .background-img {
         background-image: url("img/casino.jpg");
-        background-size: 500px;
-        width: 500px;
+        background-size: 620px;
+        background-repeat: no-repeat;
+        width: 620px;
         height: 100vh;
         display: flex;
-        justify-content: right;
         align-items: flex-end;
+        justify-content: flex-end;
     }
 
     .img-credit {
         visibility: visible;
-        color: white;
+        color:#503400;
         font-size: 10px;
-        writing-mode: vertical-rl;
+        width: auto;
     }
 
     .img-credit a{
-        color: white;
+        color:#503400;
     }
     
     .main-page {
