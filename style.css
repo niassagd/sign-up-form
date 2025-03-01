@@ -89,6 +89,10 @@
     text-align: center;
     margin-bottom: 15px;
   }
+  
+  p {
+    margin-bottom: 35px;
+  }
 
   input[type="text"],
   input[type="email"],
@@ -149,6 +153,33 @@
     background-color: rgb(74, 151, 161);
     cursor: pointer;
     
+  }
+
+  input + span,
+  textarea + span {
+    position: relative;
+  }
+
+  input:user-valid + span::before,
+  textarea:user-valid + span::before {
+    content: "✔";
+    color: rgb(0, 131, 22);
+    position: absolute;
+  }
+  input:user-invalid + span::before,
+  textarea:user-invalid + span::before {
+    content: "❌";
+    color: rgb(223, 0, 0);
+    position: absolute;
+  }
+
+  input + span::before {
+    right: 5px;
+    top: -3px;
+  }
+
+  textarea + span::before {
+    right: 5px;
   }
 
   @media only screen and (min-width: 700px) {
