@@ -108,6 +108,11 @@
   .form-input {
     margin-bottom: 20px;
   }
+
+  div.form-input + span {
+    position: relative;
+  }
+
     
   h1,
   p {
@@ -126,6 +131,11 @@
   .instructions {
     font-size: .75rem;
     color:#f0ab2c;
+  }
+
+  label.password::after {
+    content: "(minimum 8 chars)";
+    font-size: 0.75rem;
   }
 
 
@@ -274,7 +284,7 @@
         justify-content: center;
         
     }
-
+/* remove logo from form top*/
     .small-logo {
       padding: 0;
       margin: 0;
